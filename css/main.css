@@ -1,0 +1,271 @@
+/*  reset */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos generales */
+
+body{
+    background: linear-gradient(99deg, rgba(251,251,251,1) 5%, rgba(199,201,201,0.7063200280112045) 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* estilos del header */
+
+header{
+    display: none;
+}
+
+/* estilos de main */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+main h2{
+    margin: 1rem;
+}
+
+main h2 span{
+    display: block;
+}
+
+main .boton{
+    background-color: #51b0df;
+    margin-top: 1rem;
+    padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+    color: whitesmoke;
+    box-shadow: 3px 3px 10px black;
+}
+
+main img{
+    width: 60%;
+}
+
+/* estilos de section*/
+
+section{
+    display: none;
+}
+
+/* estilos de footer */
+
+footer h4{
+    text-align: center;
+}
+
+
+/* pantallas de tablet */
+
+@media screen and (min-width:600px){
+    /* estilos de header */
+    header{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 0.7rem;
+        align-items: center;
+    }
+
+    header nav ul{
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    header nav ul li{
+        font-weight: bold;
+    }
+
+    /* estilos de section*/
+
+    section{
+        display: block;
+        display: flex;
+        background-color: #BEE0F1 ;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    section div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        animation-name: animacion-div;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+    }
+
+    section div img{
+        width: 20%;
+    }
+
+
+}
+
+
+/* estilos de pantallas de escritorio */
+
+@media screen and (min-width:1024px){
+
+    /* estilos del menu */
+
+    header nav ul li{
+        transition: 3s;
+    }
+
+    header nav ul li:hover{
+        transform: scale(0.9);
+        transition: 3s;
+        box-shadow: 1px 1px 2px black;
+    }
+
+
+    /* estilos de main*/
+
+    main{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto ;
+        grid-template-rows: auto;
+
+        grid-template-areas: 
+            "p img"
+            "h2 img"
+            "p-dos img"
+            "boton img";
+        justify-content: center;
+        justify-items: center;
+    }
+
+    main h2{
+        grid-area: h2;
+    }
+
+    main img{
+        grid-area: img;
+    }
+
+    main img:hover{
+        filter: drop-shadow(10px 10px 10px rgb(128, 68, 68));
+    }
+
+    main p{
+        grid-area: p;
+    }
+
+    main .p-dos{
+        grid-area: p-dos;
+        width: 70%;
+    }
+
+    main .boton{
+        grid-area: boton;
+    }
+
+    main .boton:hover{
+        box-shadow: 2px 2px 3px black;
+    }
+
+    /* estilos de footer */
+
+    footer{
+        margin-top: 1.5rem;
+    }
+}
+
+ .content {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+ }
+
+ .logo {
+    text-align: center;
+    font-size: 3em;
+ }
+
+ .logo span{
+    color: red;
+ }
+
+ .contact-wapper{
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+ }
+
+ .contact-wapper > * {
+    padding: 1em;
+ }
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1 fr 1 fr;
+}
+
+.contact-form form .block{
+    grid-column: 1/3 ;
+}
+ .contact-form form p {
+    margin: 0;
+    padding: 1em;
+ }
+ 
+ .contact-form form button,
+ .contact-form form input,
+ .contact-form form textarea{
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid #d63031;
+ }
+
+ .contact-form form button{
+    background: coral;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+ }
+ 
+.contact-form form button:hover,
+.contact-form form button:focus{
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0
+    ;
+}
+
+.contact-info h4,´
+.contact-info ul,
+.contact-info li  {
+    text-align: center;
+    margin: 0 0 1rem 0 ;
+
+}
+
+.contact-info ul{
+    list-style: none;
+    padding: 1em;
+}
+
+.contact-info .ul .li{
+    padding: .5em;
+}
+
+.contact-wrapper{
+    display: block;
+    grid-template-columns:1fr 1fr ;
+}
